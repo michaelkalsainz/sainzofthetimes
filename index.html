@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Michael "Kal" Sainz — Sainz of the Times Media</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:#0e0d0b;color:#e8e2d9;font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;}
+
+.gold-rail{position:fixed;left:0;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,transparent,rgba(201,168,76,0.5) 30%,rgba(201,168,76,0.5) 70%,transparent);z-index:100;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:99;display:flex;justify-content:space-between;align-items:center;padding:18px 48px;background:rgba(14,13,11,0.94);backdrop-filter:blur(8px);border-bottom:1px solid rgba(232,226,217,0.06);}
+.nav-logo{display:flex;align-items:center;gap:12px;}
+.nav-wm{font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:0.08em;color:#e8e2d9;display:flex;align-items:center;gap:2px;}
+.nav-wm .g{color:#c9a84c;}
+.nav-links{display:flex;gap:28px;list-style:none;}
+.nav-links a{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(232,226,217,0.35);text-decoration:none;transition:color 0.3s;}
+.nav-links a:hover{color:#c9a84c;}
+
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;position:relative;padding:140px 64px 100px;border-bottom:1px solid rgba(232,226,217,0.07);}
+.hero::before{content:'';position:absolute;top:0;right:0;width:45%;height:100%;background:radial-gradient(ellipse at top right,rgba(180,140,80,0.07) 0%,transparent 70%);pointer-events:none;}
+
+.eyebrow{font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:rgba(232,226,217,0.32);margin-bottom:32px;}
+.name-govt{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,9vw,104px);font-weight:300;line-height:0.92;letter-spacing:-0.02em;display:block;}
+.name-nick{font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2.2vw,28px);letter-spacing:0.18em;color:#c9a84c;display:block;margin-top:10px;}
+
+.code-lines{margin-top:36px;display:flex;flex-direction:column;gap:10px;max-width:520px;}
+.code-line{font-family:'Cormorant Garamond',serif;font-size:clamp(15px,1.7vw,19px);font-style:italic;color:rgba(232,226,217,0.45);line-height:1.5;display:flex;align-items:baseline;gap:12px;}
+.code-line::before{content:'';display:inline-block;width:20px;height:1px;background:rgba(201,168,76,0.4);flex-shrink:0;position:relative;top:-3px;}
+.code-line:last-child{color:rgba(232,226,217,0.62);}
+.code-line:last-child::before{background:rgba(201,168,76,0.7);}
+
+.divider{width:56px;height:1px;background:rgba(201,168,76,0.4);margin:44px 0;}
+.logo-row{display:flex;align-items:center;gap:18px;}
+.wm-full{font-family:'Bebas Neue',sans-serif;font-size:36px;letter-spacing:0.06em;color:#e8e2d9;display:flex;align-items:center;}
+.wm-gold{color:#c9a84c;}
+.wm-media{font-size:9px;letter-spacing:0.4em;text-transform:uppercase;color:rgba(201,168,76,0.45);border-top:1px solid rgba(201,168,76,0.18);padding-top:5px;margin-top:6px;}
+
+section{padding:108px 64px;}
+.sec-eye{font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:rgba(232,226,217,0.22);margin-bottom:52px;}
+.sec-border{border-bottom:1px solid rgba(232,226,217,0.07);}
+
+.quote-item{max-width:680px;margin-bottom:68px;}
+.quote-item:last-child{margin-bottom:0;}
+.qmark{font-family:'Cormorant Garamond',serif;font-size:68px;line-height:0.5;color:rgba(201,168,76,0.15);display:block;margin-bottom:18px;}
+.qtext{font-family:'Cormorant Garamond',serif;font-size:clamp(19px,2.1vw,27px);font-weight:300;line-height:1.55;color:#e8e2d9;}
+.qattr{margin-top:16px;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(232,226,217,0.28);}
+.quote-item.own .qtext{font-style:italic;font-size:clamp(15px,1.7vw,21px);color:rgba(232,226,217,0.68);}
+.quote-item.own .qattr{color:rgba(201,168,76,0.6);}
+
+.book-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:72px;align-items:start;max-width:860px;}
+.book-placeholder{width:100%;aspect-ratio:3/4;background:linear-gradient(145deg,#1a3a6e 0%,#0e0d0b 100%);border-radius:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;border:1px solid rgba(201,168,76,0.18);box-shadow:0 32px 80px rgba(0,0,0,0.55);}
+.book-title-display{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:0.1em;color:#e8e2d9;text-align:center;line-height:1.1;}
+.book-sub-display{font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(201,168,76,0.55);}
+.book-label{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#c9a84c;margin-bottom:14px;}
+.book-h{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,3vw,36px);font-weight:300;line-height:1.1;margin-bottom:16px;}
+.book-desc{font-family:'Cormorant Garamond',serif;font-size:17px;line-height:1.75;color:rgba(232,226,217,0.6);margin-bottom:36px;}
+.audio-box{background:rgba(232,226,217,0.03);border:1px solid rgba(232,226,217,0.09);border-radius:4px;padding:22px 26px;margin-bottom:20px;}
+.audio-label{font-size:9px;letter-spacing:0.25em;text-transform:uppercase;color:rgba(232,226,217,0.28);margin-bottom:14px;}
+.audio-controls{display:flex;align-items:center;gap:14px;}
+.play-btn{width:38px;height:38px;border-radius:50%;background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.35);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:background 0.2s;}
+.play-btn:hover{background:rgba(201,168,76,0.22);}
+.play-icon{width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:12px solid #c9a84c;margin-left:3px;}
+.audio-track{flex:1;}
+.audio-bar{height:2px;background:rgba(232,226,217,0.08);border-radius:1px;}
+.audio-time{font-size:10px;color:rgba(232,226,217,0.25);margin-top:7px;letter-spacing:0.04em;}
+.audio-note{font-size:10px;color:rgba(232,226,217,0.2);font-style:italic;}
+
+.scripts-intro{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:rgba(232,226,217,0.38);max-width:560px;line-height:1.7;margin-bottom:56px;}
+.script-card{border:1px solid rgba(232,226,217,0.07);padding:40px;margin-bottom:3px;transition:background 0.3s;position:relative;}
+.script-card:hover{background:rgba(232,226,217,0.025);}
+.script-accent{position:absolute;top:0;left:0;width:2px;height:100%;background:rgba(201,168,76,0.25);}
+.script-num{font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:0.2em;color:rgba(201,168,76,0.35);margin-bottom:12px;}
+.script-title{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.8vw,32px);font-weight:300;margin-bottom:8px;}
+.script-logline{font-size:13px;color:rgba(232,226,217,0.4);line-height:1.7;max-width:640px;margin-bottom:20px;}
+.script-tags{display:flex;gap:10px;flex-wrap:wrap;}
+.tag{font-size:8px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(201,168,76,0.5);border:1px solid rgba(201,168,76,0.18);padding:3px 10px;}
+
+.work-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;max-width:660px;}
+.wcard{background:rgba(232,226,217,0.022);border:1px solid rgba(232,226,217,0.055);padding:32px 28px;transition:background 0.3s;}
+.wcard:hover{background:rgba(232,226,217,0.045);}
+.wcard-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;margin-bottom:10px;}
+.wcard-desc{font-size:12px;color:rgba(232,226,217,0.35);line-height:1.7;}
+.wcard-tag{display:inline-block;margin-top:18px;font-size:8px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(201,168,76,0.5);border:1px solid rgba(201,168,76,0.16);padding:3px 9px;}
+
+.photos-intro{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:rgba(232,226,217,0.36);max-width:460px;line-height:1.7;margin-bottom:52px;}
+.photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;max-width:780px;}
+.photo-card{aspect-ratio:4/3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px solid rgba(232,226,217,0.05);}
+.photo-cap{font-size:10px;letter-spacing:0.12em;color:rgba(232,226,217,0.18);text-align:center;padding:0 14px;}
+.p1{background:rgba(30,60,100,0.1);}
+.p2{background:rgba(14,13,11,0.5);}
+.p3{background:rgba(201,168,76,0.04);}
+.p4{background:rgba(192,21,42,0.04);}
+.photo-note{font-size:10px;color:rgba(232,226,217,0.16);margin-top:20px;font-style:italic;}
+
+.footer{padding:56px 64px;display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid rgba(232,226,217,0.055);}
+.footer-brand{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:0.2em;color:rgba(232,226,217,0.18);}
+.footer-sub{font-size:9px;letter-spacing:0.14em;color:rgba(232,226,217,0.1);margin-top:5px;text-transform:uppercase;}
+.footer-right{text-align:right;}
+.footer-url{font-size:10px;color:rgba(232,226,217,0.18);letter-spacing:0.05em;}
+.footer-code{font-family:'Cormorant Garamond',serif;font-size:13px;font-style:italic;color:rgba(201,168,76,0.28);margin-top:7px;}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+.hero>*{animation:fadeUp 0.9s ease forwards;opacity:0;}
+.eyebrow{animation-delay:0.1s;}
+.name-govt{animation-delay:0.2s;}
+.name-nick{animation-delay:0.3s;}
+.code-lines{animation-delay:0.45s;}
+.divider{animation-delay:0.6s;}
+.logo-row{animation-delay:0.75s;}
+</style>
+</head>
+<body>
+
+<div class="gold-rail"></div>
+
+<nav>
+  <div class="nav-logo">
+    <svg width="26" height="26" viewBox="0 0 80 80" fill="none">
+      <polygon points="40,2 78,40 40,78 2,40" fill="#1a3a6e" stroke="#c9a84c" stroke-width="3"/>
+      <path d="M27 57 Q27 40 40 40 Q53 40 53 23" stroke="#e8e2d9" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      <circle cx="27" cy="59" r="2.5" fill="#c9a84c"/>
+      <circle cx="53" cy="21" r="2.5" fill="#c9a84c"/>
+    </svg>
+    <div class="nav-wm">SAINZ&nbsp;<svg width="11" height="14" viewBox="0 0 30 38" fill="none" style="display:inline-block;vertical-align:middle;"><ellipse cx="15" cy="19" rx="12" ry="14" stroke="#e8e2d9" stroke-width="2" fill="none"/><circle cx="15" cy="19" r="1.5" fill="#e8e2d9"/><line x1="15" y1="19" x2="15" y2="10" stroke="#c0152a" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="19" x2="21" y2="23" stroke="#c0152a" stroke-width="1.5" stroke-linecap="round"/></svg>F&nbsp;THE&nbsp;<span class="g">TIMES</span></div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#book">Homeless Hound</a></li>
+    <li><a href="#scripts">Scripts</a></li>
+    <li><a href="#photos">La Vida Local</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <p class="eyebrow">Storyteller &nbsp;·&nbsp; Writer &nbsp;·&nbsp; Actor &nbsp;·&nbsp; Los Angeles</p>
+  <span class="name-govt">Michael Sainz</span>
+  <span class="name-nick">"Kal"</span>
+  <div class="code-lines">
+    <span class="code-line">I live by a code.</span>
+    <span class="code-line">Curiosity is key.</span>
+    <span class="code-line">Within everything exists its opposite.</span>
+  </div>
+  <div class="divider"></div>
+  <div class="logo-row">
+    <svg width="54" height="54" viewBox="0 0 80 80" fill="none">
+      <polygon points="40,2 78,40 40,78 2,40" fill="#1a3a6e" stroke="#c9a84c" stroke-width="3"/>
+      <path d="M27 57 Q27 40 40 40 Q53 40 53 23" stroke="#e8e2d9" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      <circle cx="27" cy="59" r="2.5" fill="#c9a84c"/>
+      <circle cx="53" cy="21" r="2.5" fill="#c9a84c"/>
+    </svg>
+    <div>
+      <div class="wm-full">SAINZ&nbsp;<svg width="22" height="28" viewBox="0 0 30 38" fill="none" style="display:inline-block;vertical-align:middle;margin:0 2px;"><ellipse cx="15" cy="19" rx="12" ry="14" stroke="#e8e2d9" stroke-width="1.8" fill="none"/><circle cx="15" cy="19" r="1.5" fill="#e8e2d9"/><line x1="15" y1="19" x2="15" y2="10" stroke="#c0152a" stroke-width="1.8" stroke-linecap="round"/><line x1="15" y1="19" x2="21" y2="23" stroke="#c0152a" stroke-width="1.4" stroke-linecap="round"/><line x1="15" y1="6" x2="15" y2="8" stroke="#e8e2d9" stroke-width="1.2" stroke-linecap="round"/><line x1="15" y1="30" x2="15" y2="32" stroke="#e8e2d9" stroke-width="1.2" stroke-linecap="round"/><line x1="4" y1="19" x2="6" y2="19" stroke="#e8e2d9" stroke-width="1.2" stroke-linecap="round"/><line x1="24" y1="19" x2="26" y2="19" stroke="#e8e2d9" stroke-width="1.2" stroke-linecap="round"/></svg>F&nbsp;THE&nbsp;<span class="wm-gold">TIMES</span></div>
+      <div class="wm-media">Media</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec-border">
+  <p class="sec-eye">Words that matter</p>
+  <div class="quote-item">
+    <span class="qmark">"</span>
+    <p class="qtext">The only thing necessary for the triumph of evil is for good men to do nothing.</p>
+    <p class="qattr">— Edmund Burke</p>
+  </div>
+  <div class="quote-item">
+    <span class="qmark">"</span>
+    <p class="qtext">Our deepest fear is not that we are inadequate. Our deepest fear is that we are powerful beyond measure.</p>
+    <p class="qattr">— Marianne Williamson</p>
+  </div>
+  <div class="quote-item own">
+    <span class="qmark">"</span>
+    <p class="qtext">Extra cheese is a waste of money. You have cheese at home.</p>
+    <p class="qattr">— Michael "Kal" Sainz</p>
+  </div>
+</section>
+
+<section class="sec-border" id="book" style="background:rgba(232,226,217,0.012);">
+  <p class="sec-eye">The Homeless Hound</p>
+  <div class="book-grid">
+    <div class="book-placeholder">
+      <svg width="52" height="52" viewBox="0 0 80 80" fill="none">
+        <polygon points="40,2 78,40 40,78 2,40" fill="#1a3a6e" stroke="#c9a84c" stroke-width="3"/>
+        <path d="M27 57 Q27 40 40 40 Q53 40 53 23" stroke="#e8e2d9" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        <circle cx="27" cy="59" r="2.5" fill="#c9a84c"/>
+        <circle cx="53" cy="21" r="2.5" fill="#c9a84c"/>
+      </svg>
+      <div class="book-title-display">THE<br>HOMELESS<br>HOUND</div>
+      <div class="book-sub-display">by Michael "Kal" Sainz</div>
+    </div>
+    <div>
+      <p class="book-label">Children's Picture Book · Hollywood, CA</p>
+      <h2 class="book-h">A stray dog named Jaimo finds his way home.</h2>
+      <p class="book-desc">Set against the streets, beaches, and boulevards of Los Angeles, The Homeless Hound is a rhyming picture book about belonging, courage, and the strangers who become family. For readers 4–10. And anyone who has ever wandered.</p>
+      <div class="audio-box">
+        <p class="audio-label">Listen — read by the author</p>
+        <div class="audio-controls">
+          <div class="play-btn" onclick="this.style.background='rgba(201,168,76,0.22)'"><div class="play-icon"></div></div>
+          <div class="audio-track">
+            <div class="audio-bar"></div>
+            <p class="audio-time">Recording coming soon — check back soon.</p>
+          </div>
+        </div>
+      </div>
+      <p class="audio-note">Audio in progress.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec-border" id="scripts">
+  <p class="sec-eye">Feature Scripts</p>
+  <p class="scripts-intro">Character-driven stories built from the inside out. Every decision earned. Every character true to themselves first.</p>
+  <div class="script-card">
+    <div class="script-accent"></div>
+    <p class="script-num">Script No. 001</p>
+    <h3 class="script-title">Tales of the Hoptec: Solarus</h3>
+    <p class="script-logline">A man with Native American, Mexican and European roots discovers he carries gifts he never asked for — and a destiny he cannot outrun. Set in Elysium, California. A superhero origin story built from grief, family, and the question of what it costs to be the one who helps.</p>
+    <div class="script-tags">
+      <span class="tag">Feature Film</span>
+      <span class="tag">Superhero</span>
+      <span class="tag">Drama</span>
+      <span class="tag">Multicultural</span>
+      <span class="tag">Original IP</span>
+    </div>
+  </div>
+  <div class="script-card">
+    <div class="script-accent"></div>
+    <p class="script-num">Script No. 002</p>
+    <h3 class="script-title">Tales of the Hoptec: Solarus II</h3>
+    <p class="script-logline">Nick Tonamor is Solarus — and the world is starting to notice. A new threat emerges from underground, a woman he cannot read enters his life, and the family he would do anything for needs him in ways the suit cannot solve. The sequel that earns its ending.</p>
+    <div class="script-tags">
+      <span class="tag">Feature Film</span>
+      <span class="tag">Superhero</span>
+      <span class="tag">Romance</span>
+      <span class="tag">Action</span>
+      <span class="tag">Original IP</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec-border">
+  <p class="sec-eye">Also in the room</p>
+  <div class="work-grid">
+    <div class="wcard">
+      <p class="wcard-title">Television</p>
+      <p class="wcard-desc">Stories for the room. The kind that live in your chest long after the credits roll.</p>
+      <span class="wcard-tag">TV Writing</span>
+    </div>
+    <div class="wcard">
+      <p class="wcard-title">Poetry</p>
+      <p class="wcard-desc">Sporadic. Honest. The vacuum doing what the vacuum does.</p>
+      <span class="wcard-tag">Coming Soon</span>
+    </div>
+    <div class="wcard">
+      <p class="wcard-title">The Jump</p>
+      <p class="wcard-desc">A personal essay. A mall escalator in December. A stranger who said jump. The rest is history.</p>
+      <span class="wcard-tag">Personal Essay</span>
+    </div>
+    <div class="wcard">
+      <p class="wcard-title">Homeless Hound II</p>
+      <p class="wcard-desc">Jaimo has a home now. The boulevard still calls. More adventures ahead.</p>
+      <span class="wcard-tag">In Development</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec-border" id="photos">
+  <p class="sec-eye">La Vida Local</p>
+  <p class="photos-intro">The life that makes the work possible. Mostly Jaimo. Sometimes Los Angeles. Always both.</p>
+  <div class="photo-grid">
+    <div class="photo-card p1"><p class="photo-cap">Jaimo — maximum skepticism</p></div>
+    <div class="photo-card p2"><p class="photo-cap">Jaimo — tongue out, full joy</p></div>
+    <div class="photo-card p3"><p class="photo-cap">Wide-eyed on the road</p></div>
+    <div class="photo-card p4"><p class="photo-cap">That's the stuff</p></div>
+  </div>
+</section>
+
+<footer class="footer" id="contact">
+  <div>
+    <p class="footer-brand">Sainz of the Times Media</p>
+    <p class="footer-sub">Los Angeles, California · sainzofthetimes.com</p>
+  </div>
+  <div class="footer-right">
+    <p class="footer-url">Michael "Kal" Sainz</p>
+    <p class="footer-code">Search with a pure heart, be brave and be strong.</p>
+  </div>
+</footer>
+
+</body>
+</html>
