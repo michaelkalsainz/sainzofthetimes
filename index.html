@@ -44,6 +44,7 @@ section{padding:108px 64px;}
 .sec-eye{font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:rgba(232,226,217,0.22);margin-bottom:52px;}
 .sec-border{border-bottom:1px solid rgba(232,226,217,0.07);}
 
+/* QUOTES */
 .quote-item{max-width:680px;margin-bottom:68px;}
 .quote-item:last-child{margin-bottom:0;}
 .qmark{font-family:'Cormorant Garamond',serif;font-size:68px;line-height:0.5;color:rgba(201,168,76,0.15);display:block;margin-bottom:18px;}
@@ -52,14 +53,22 @@ section{padding:108px 64px;}
 .quote-item.own .qtext{font-style:italic;font-size:clamp(15px,1.7vw,21px);color:rgba(232,226,217,0.68);}
 .quote-item.own .qattr{color:rgba(201,168,76,0.6);}
 
+/* BOOK */
 .book-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:72px;align-items:start;max-width:860px;}
-.book-placeholder{width:100%;aspect-ratio:3/4;background:linear-gradient(145deg,#1a3a6e 0%,#0e0d0b 100%);border-radius:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;border:1px solid rgba(201,168,76,0.18);box-shadow:0 32px 80px rgba(0,0,0,0.55);}
+.book-cover{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:4px;border:1px solid rgba(201,168,76,0.18);box-shadow:0 32px 80px rgba(0,0,0,0.55);display:block;}
+.book-cover-fallback{width:100%;aspect-ratio:3/4;background:linear-gradient(145deg,#1a3a6e 0%,#0e0d0b 100%);border-radius:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;border:1px solid rgba(201,168,76,0.18);box-shadow:0 32px 80px rgba(0,0,0,0.55);}
 .book-title-display{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:0.1em;color:#e8e2d9;text-align:center;line-height:1.1;}
 .book-sub-display{font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(201,168,76,0.55);}
 .book-label{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#c9a84c;margin-bottom:14px;}
 .book-h{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,3vw,36px);font-weight:300;line-height:1.1;margin-bottom:16px;}
-.book-desc{font-family:'Cormorant Garamond',serif;font-size:17px;line-height:1.75;color:rgba(232,226,217,0.6);margin-bottom:36px;}
-.audio-box{background:rgba(232,226,217,0.03);border:1px solid rgba(232,226,217,0.09);border-radius:4px;padding:22px 26px;margin-bottom:20px;}
+.book-desc{font-family:'Cormorant Garamond',serif;font-size:17px;line-height:1.75;color:rgba(232,226,217,0.6);margin-bottom:28px;}
+
+.pdf-link{display:inline-flex;align-items:center;gap:10px;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#c9a84c;text-decoration:none;border:1px solid rgba(201,168,76,0.3);padding:10px 18px;transition:all 0.25s;margin-bottom:10px;}
+.pdf-link:hover{background:rgba(201,168,76,0.08);border-color:rgba(201,168,76,0.6);}
+.pdf-link svg{flex-shrink:0;}
+.pdf-note{font-size:10px;color:rgba(232,226,217,0.2);font-style:italic;margin-top:6px;}
+
+.audio-box{background:rgba(232,226,217,0.03);border:1px solid rgba(232,226,217,0.09);border-radius:4px;padding:22px 26px;margin-bottom:12px;margin-top:24px;}
 .audio-label{font-size:9px;letter-spacing:0.25em;text-transform:uppercase;color:rgba(232,226,217,0.28);margin-bottom:14px;}
 .audio-controls{display:flex;align-items:center;gap:14px;}
 .play-btn{width:38px;height:38px;border-radius:50%;background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.35);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:background 0.2s;}
@@ -70,6 +79,7 @@ section{padding:108px 64px;}
 .audio-time{font-size:10px;color:rgba(232,226,217,0.25);margin-top:7px;letter-spacing:0.04em;}
 .audio-note{font-size:10px;color:rgba(232,226,217,0.2);font-style:italic;}
 
+/* SCRIPTS */
 .scripts-intro{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:rgba(232,226,217,0.38);max-width:560px;line-height:1.7;margin-bottom:56px;}
 .script-card{border:1px solid rgba(232,226,217,0.07);padding:40px;margin-bottom:3px;transition:background 0.3s;position:relative;}
 .script-card:hover{background:rgba(232,226,217,0.025);}
@@ -77,9 +87,25 @@ section{padding:108px 64px;}
 .script-num{font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:0.2em;color:rgba(201,168,76,0.35);margin-bottom:12px;}
 .script-title{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.8vw,32px);font-weight:300;margin-bottom:8px;}
 .script-logline{font-size:13px;color:rgba(232,226,217,0.4);line-height:1.7;max-width:640px;margin-bottom:20px;}
-.script-tags{display:flex;gap:10px;flex-wrap:wrap;}
+.script-tags{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px;}
 .tag{font-size:8px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(201,168,76,0.5);border:1px solid rgba(201,168,76,0.18);padding:3px 10px;}
+.script-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+.request-note{font-size:10px;letter-spacing:0.12em;color:rgba(232,226,217,0.22);font-style:italic;}
 
+/* TELEVISION */
+.tv-intro{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:rgba(232,226,217,0.38);max-width:560px;line-height:1.7;margin-bottom:56px;}
+
+/* POETRY */
+.poetry-intro{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:rgba(232,226,217,0.38);max-width:560px;line-height:1.7;margin-bottom:56px;}
+.poem-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;max-width:960px;}
+.poem-card{border:1px solid rgba(232,226,217,0.07);padding:40px 36px;transition:background 0.3s;position:relative;}
+.poem-card:hover{background:rgba(232,226,217,0.025);}
+.poem-accent{position:absolute;top:0;left:0;width:2px;height:100%;background:rgba(201,168,76,0.2);}
+.poem-title{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:0.22em;color:rgba(201,168,76,0.6);margin-bottom:22px;}
+.poem-body{font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;line-height:1.9;color:rgba(232,226,217,0.55);white-space:pre-line;}
+.poem-card.haiku .poem-body{font-size:17px;color:rgba(232,226,217,0.65);letter-spacing:0.02em;}
+
+/* ALSO IN THE ROOM */
 .work-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;max-width:660px;}
 .wcard{background:rgba(232,226,217,0.022);border:1px solid rgba(232,226,217,0.055);padding:32px 28px;transition:background 0.3s;}
 .wcard:hover{background:rgba(232,226,217,0.045);}
@@ -87,23 +113,43 @@ section{padding:108px 64px;}
 .wcard-desc{font-size:12px;color:rgba(232,226,217,0.35);line-height:1.7;}
 .wcard-tag{display:inline-block;margin-top:18px;font-size:8px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(201,168,76,0.5);border:1px solid rgba(201,168,76,0.16);padding:3px 9px;}
 
+/* PHOTOS */
 .photos-intro{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:rgba(232,226,217,0.36);max-width:460px;line-height:1.7;margin-bottom:52px;}
-.photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;max-width:780px;}
-.photo-card{aspect-ratio:4/3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px solid rgba(232,226,217,0.05);}
-.photo-cap{font-size:10px;letter-spacing:0.12em;color:rgba(232,226,217,0.18);text-align:center;padding:0 14px;}
+.photo-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;max-width:960px;}
+.photo-card{aspect-ratio:4/3;overflow:hidden;position:relative;border:1px solid rgba(232,226,217,0.05);}
+.photo-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s ease;}
+.photo-card:hover img{transform:scale(1.03);}
+.photo-card-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.photo-cap{position:absolute;bottom:0;left:0;right:0;padding:10px 14px;font-size:10px;letter-spacing:0.12em;color:rgba(232,226,217,0.45);background:linear-gradient(transparent,rgba(14,13,11,0.75));text-align:left;}
+.photo-cap-plain{font-size:10px;letter-spacing:0.12em;color:rgba(232,226,217,0.18);text-align:center;padding:0 14px;}
 .p1{background:rgba(30,60,100,0.1);}
 .p2{background:rgba(14,13,11,0.5);}
 .p3{background:rgba(201,168,76,0.04);}
 .p4{background:rgba(192,21,42,0.04);}
 .photo-note{font-size:10px;color:rgba(232,226,217,0.16);margin-top:20px;font-style:italic;}
 
+/* MEMORIAL VIDEO */
+.memorial-wrap{max-width:780px;}
+.memorial-desc{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:rgba(232,226,217,0.36);line-height:1.7;margin-bottom:32px;max-width:560px;}
+.video-container{width:100%;aspect-ratio:16/9;background:rgba(232,226,217,0.03);border:1px solid rgba(232,226,217,0.07);position:relative;overflow:hidden;}
+.video-container video{width:100%;height:100%;object-fit:cover;}
+.video-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;}
+.video-placeholder-icon{width:60px;height:60px;border-radius:50%;background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.25);display:flex;align-items:center;justify-content:center;}
+.video-placeholder-text{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(232,226,217,0.2);}
+.fair-use{margin-top:14px;font-size:9px;letter-spacing:0.1em;color:rgba(232,226,217,0.16);line-height:1.6;max-width:560px;font-style:italic;}
+
+/* FOOTER */
 .footer{padding:56px 64px;display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid rgba(232,226,217,0.055);}
 .footer-brand{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:0.2em;color:rgba(232,226,217,0.18);}
 .footer-sub{font-size:9px;letter-spacing:0.14em;color:rgba(232,226,217,0.1);margin-top:5px;text-transform:uppercase;}
+.footer-emails{margin-top:12px;display:flex;flex-direction:column;gap:5px;}
+.footer-email{font-size:10px;letter-spacing:0.08em;color:rgba(201,168,76,0.45);text-decoration:none;transition:color 0.25s;}
+.footer-email:hover{color:rgba(201,168,76,0.8);}
 .footer-right{text-align:right;}
 .footer-url{font-size:10px;color:rgba(232,226,217,0.18);letter-spacing:0.05em;}
 .footer-code{font-family:'Cormorant Garamond',serif;font-size:13px;font-style:italic;color:rgba(201,168,76,0.28);margin-top:7px;}
 
+/* ANIMATIONS */
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
 .hero>*{animation:fadeUp 0.9s ease forwards;opacity:0;}
 .eyebrow{animation-delay:0.1s;}
@@ -112,6 +158,20 @@ section{padding:108px 64px;}
 .code-lines{animation-delay:0.45s;}
 .divider{animation-delay:0.6s;}
 .logo-row{animation-delay:0.75s;}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  nav{padding:14px 20px;}
+  .nav-links{gap:16px;}
+  .hero{padding:120px 24px 80px;}
+  section{padding:72px 24px;}
+  .book-grid{grid-template-columns:1fr;gap:40px;}
+  .poem-grid{grid-template-columns:1fr;}
+  .work-grid{grid-template-columns:1fr;}
+  .photo-grid{grid-template-columns:1fr;}
+  .footer{flex-direction:column;gap:32px;align-items:flex-start;padding:40px 24px;}
+  .footer-right{text-align:left;}
+}
 </style>
 </head>
 <body>
@@ -131,17 +191,20 @@ section{padding:108px 64px;}
   <ul class="nav-links">
     <li><a href="#book">Homeless Hound</a></li>
     <li><a href="#scripts">Scripts</a></li>
+    <li><a href="#television">Television</a></li>
+    <li><a href="#poetry">Poetry</a></li>
     <li><a href="#photos">La Vida Local</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <p class="eyebrow">Storyteller &nbsp;·&nbsp; Writer &nbsp;·&nbsp; Actor &nbsp;·&nbsp; Los Angeles</p>
   <span class="name-govt">Michael Sainz</span>
   <span class="name-nick">"Kal"</span>
   <div class="code-lines">
-    <span class="code-line">I live by a code.</span>
+    <span class="code-line">Trying to be the change.</span>
     <span class="code-line">Curiosity is key.</span>
     <span class="code-line">Within everything exists its opposite.</span>
   </div>
@@ -160,6 +223,7 @@ section{padding:108px 64px;}
   </div>
 </section>
 
+<!-- QUOTES -->
 <section class="sec-border">
   <p class="sec-eye">Words that matter</p>
   <div class="quote-item">
@@ -179,23 +243,36 @@ section{padding:108px 64px;}
   </div>
 </section>
 
+<!-- HOMELESS HOUND -->
 <section class="sec-border" id="book" style="background:rgba(232,226,217,0.012);">
   <p class="sec-eye">The Homeless Hound</p>
   <div class="book-grid">
-    <div class="book-placeholder">
-      <svg width="52" height="52" viewBox="0 0 80 80" fill="none">
-        <polygon points="40,2 78,40 40,78 2,40" fill="#1a3a6e" stroke="#c9a84c" stroke-width="3"/>
-        <path d="M27 57 Q27 40 40 40 Q53 40 53 23" stroke="#e8e2d9" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-        <circle cx="27" cy="59" r="2.5" fill="#c9a84c"/>
-        <circle cx="53" cy="21" r="2.5" fill="#c9a84c"/>
-      </svg>
-      <div class="book-title-display">THE<br>HOMELESS<br>HOUND</div>
-      <div class="book-sub-display">by Michael "Kal" Sainz</div>
+    <div>
+      <img
+        src="homelesshound_thumb.jpg"
+        alt="The Homeless Hound — cover"
+        class="book-cover"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+      />
+      <div class="book-cover-fallback" style="display:none;">
+        <svg width="52" height="52" viewBox="0 0 80 80" fill="none">
+          <polygon points="40,2 78,40 40,78 2,40" fill="#1a3a6e" stroke="#c9a84c" stroke-width="3"/>
+          <path d="M27 57 Q27 40 40 40 Q53 40 53 23" stroke="#e8e2d9" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <circle cx="27" cy="59" r="2.5" fill="#c9a84c"/>
+          <circle cx="53" cy="21" r="2.5" fill="#c9a84c"/>
+        </svg>
+        <div class="book-title-display">THE<br>HOMELESS<br>HOUND</div>
+        <div class="book-sub-display">by Michael "Kal" Sainz</div>
+      </div>
     </div>
     <div>
       <p class="book-label">Children's Picture Book · Hollywood, CA</p>
       <h2 class="book-h">A stray dog named Jaimo finds his way home.</h2>
       <p class="book-desc">Set against the streets, beaches, and boulevards of Los Angeles, The Homeless Hound is a rhyming picture book about belonging, courage, and the strangers who become family. For readers 4–10. And anyone who has ever wandered.</p>
+      <a class="pdf-link" href="The Homeless_Hound_1stdraft.pdf" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        Read the Book
+      </a>
       <div class="audio-box">
         <p class="audio-label">Listen — read by the author</p>
         <div class="audio-controls">
@@ -206,14 +283,15 @@ section{padding:108px 64px;}
           </div>
         </div>
       </div>
-      <p class="audio-note">Audio in progress.</p>
     </div>
   </div>
 </section>
 
+<!-- FEATURE SCRIPTS -->
 <section class="sec-border" id="scripts">
   <p class="sec-eye">Feature Scripts</p>
   <p class="scripts-intro">Character-driven stories built from the inside out. Every decision earned. Every character true to themselves first.</p>
+
   <div class="script-card">
     <div class="script-accent"></div>
     <p class="script-num">Script No. 001</p>
@@ -226,11 +304,19 @@ section{padding:108px 64px;}
       <span class="tag">Multicultural</span>
       <span class="tag">Original IP</span>
     </div>
+    <div class="script-actions">
+      <a class="pdf-link" href="solarus_act1.pdf" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        Read Act One
+      </a>
+      <span class="request-note">Full script available upon request</span>
+    </div>
   </div>
+
   <div class="script-card">
     <div class="script-accent"></div>
     <p class="script-num">Script No. 002</p>
-    <h3 class="script-title">Tales of the Hoptec: Solarus II</h3>
+    <h3 class="script-title">Tales of the Hoptec: Wings of Fire</h3>
     <p class="script-logline">Nick Tonamor is Solarus — and the world is starting to notice. A new threat emerges from underground, a woman he cannot read enters his life, and the family he would do anything for needs him in ways the suit cannot solve. The sequel that earns its ending.</p>
     <div class="script-tags">
       <span class="tag">Feature Film</span>
@@ -239,27 +325,118 @@ section{padding:108px 64px;}
       <span class="tag">Action</span>
       <span class="tag">Original IP</span>
     </div>
+    <div class="script-actions">
+      <a class="pdf-link" href="wingsoffire_act1.pdf" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        Read Act One
+      </a>
+      <span class="request-note">Full script available upon request</span>
+    </div>
   </div>
 </section>
 
-<section class="sec-border">
+<!-- TELEVISION -->
+<section class="sec-border" id="television" style="background:rgba(232,226,217,0.012);">
+  <p class="sec-eye">Television</p>
+  <p class="tv-intro">Stories for the room. The kind that live in your chest long after the credits roll.</p>
+
+  <div class="script-card">
+    <div class="script-accent"></div>
+    <p class="script-num">Pilot No. 001</p>
+    <h3 class="script-title">The Pits</h3>
+    <p class="script-logline">A father and son trade lives on a high card. Single-camera comedy that earns every laugh from the inside out — because the best jokes are the ones you didn't see coming and the ones you can't stop thinking about.</p>
+    <div class="script-tags">
+      <span class="tag">Television</span>
+      <span class="tag">Single-Camera</span>
+      <span class="tag">Comedy</span>
+      <span class="tag">Original IP</span>
+    </div>
+    <div class="script-actions">
+      <a class="pdf-link" href="thepits_pilot.pdf" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        Read the Pilot
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- POETRY -->
+<section class="sec-border" id="poetry">
+  <p class="sec-eye">Poetry</p>
+  <p class="poetry-intro">Sporadic. Honest. The vacuum doing what the vacuum does.</p>
+  <div class="poem-grid">
+
+    <div class="poem-card">
+      <div class="poem-accent"></div>
+      <p class="poem-title">Who's the Boss?</p>
+      <p class="poem-body">You lead with your nose as you click and you clatter,
+Then freeze so quickly analyzing the matter,
+It's just another set of flowers to smell,
+Every sniff a memory and your brain a well.
+
+You pull this chain with intention and sheesh!
+It's morning, I'm groggy. I just give you more leash.
+You stop and turn like you're calling the manager
+But I'm the boss here as I pet your soft fur.
+
+Our daily morning dance, always turns into a war
+You always want more, and think you're so hard-core.
+The block is rounded our ritual is at an end
+Now it's time together to find out what's around the bend.</p>
+    </div>
+
+    <div class="poem-card">
+      <div class="poem-accent"></div>
+      <p class="poem-title">Wings of Whimsy</p>
+      <p class="poem-body">Buzz buzz buzz he flits on by
+Zipping from one flower to another
+He always tends to catch my dog's eye
+As we take a morning stroll together.
+
+A medicine card told me they are joy,
+They have a way of making me smile,
+Moving about like an atomic toy,
+Pollinating flowers, all the while.
+
+He zips up and hovers above my dome,
+Says hi and continues to roam.</p>
+    </div>
+
+    <div class="poem-card">
+      <div class="poem-accent"></div>
+      <p class="poem-title">That Damn Five</p>
+      <p class="poem-body">Stuck looking down the endless five
+Hand, searching for a fictitious smoke
+I need another action to keep me alive
+So I took a sip of the bottle of Diet Coke.
+
+Eyelids getting heavy, wanting to sleep
+The podcast isn't getting it done
+On music, I tap shuffle taking a leap
+And there's the song about the one.
+
+She thawed this guy's ice cold heart
+I can't remember, is this feeling fun?
+The song revisits the long dormant part
+The section of my chest, full of glee.
+It was worth it, to feel soreness is the fee.</p>
+    </div>
+
+    <div class="poem-card haiku">
+      <div class="poem-accent"></div>
+      <p class="poem-title">A Haiku</p>
+      <p class="poem-body">The weight of those eyes
+Ticks like a soft furry clock
+The treats in the bowl</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ALSO IN THE ROOM -->
+<section class="sec-border" style="background:rgba(232,226,217,0.012);">
   <p class="sec-eye">Also in the room</p>
   <div class="work-grid">
-    <div class="wcard">
-      <p class="wcard-title">Television</p>
-      <p class="wcard-desc">Stories for the room. The kind that live in your chest long after the credits roll.</p>
-      <span class="wcard-tag">TV Writing</span>
-    </div>
-    <div class="wcard">
-      <p class="wcard-title">Poetry</p>
-      <p class="wcard-desc">Sporadic. Honest. The vacuum doing what the vacuum does.</p>
-      <span class="wcard-tag">Coming Soon</span>
-    </div>
-    <div class="wcard">
-      <p class="wcard-title">The Jump</p>
-      <p class="wcard-desc">A personal essay. A mall escalator in December. A stranger who said jump. The rest is history.</p>
-      <span class="wcard-tag">Personal Essay</span>
-    </div>
     <div class="wcard">
       <p class="wcard-title">Homeless Hound II</p>
       <p class="wcard-desc">Jaimo has a home now. The boulevard still calls. More adventures ahead.</p>
@@ -268,21 +445,84 @@ section{padding:108px 64px;}
   </div>
 </section>
 
+<!-- LA VIDA LOCAL -->
 <section class="sec-border" id="photos">
   <p class="sec-eye">La Vida Local</p>
   <p class="photos-intro">The life that makes the work possible. Mostly Jaimo. Sometimes Los Angeles. Always both.</p>
   <div class="photo-grid">
-    <div class="photo-card p1"><p class="photo-cap">Jaimo — maximum skepticism</p></div>
-    <div class="photo-card p2"><p class="photo-cap">Jaimo — tongue out, full joy</p></div>
-    <div class="photo-card p3"><p class="photo-cap">Wide-eyed on the road</p></div>
-    <div class="photo-card p4"><p class="photo-cap">That's the stuff</p></div>
+
+    <div class="photo-card p1">
+      <img src="jaimo_madre.jpg" alt="Jaimo with his madre"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+      />
+      <div class="photo-card-placeholder" style="display:none;"><p class="photo-cap-plain">Jaimo with his madre</p></div>
+      <p class="photo-cap">Jaimo with his madre</p>
+    </div>
+
+    <div class="photo-card p2">
+      <img src="Jaimo%20and%20tauntaun.jpg" alt="Jaimo and Tauntaun"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+      />
+      <div class="photo-card-placeholder" style="display:none;"><p class="photo-cap-plain">Jaimo and Tauntaun</p></div>
+      <p class="photo-cap">Jaimo and Tauntaun</p>
+    </div>
+
+    <div class="photo-card p3">
+      <img src="jaimo_walk.jpg" alt="On the boulevard"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+      />
+      <div class="photo-card-placeholder" style="display:none;"><p class="photo-cap-plain">On the boulevard</p></div>
+      <p class="photo-cap">On the boulevard</p>
+    </div>
+
+    <div class="photo-card p4">
+      <img src="IMG_7263%203.jpg" alt="Taking it all in"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+      />
+      <div class="photo-card-placeholder" style="display:none;"><p class="photo-cap-plain">Taking it all in</p></div>
+      <p class="photo-cap">Taking it all in</p>
+    </div>
+
+    <div class="photo-card p1">
+      <img src="IMG_9099.jpg" alt="Just living"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+      />
+      <div class="photo-card-placeholder" style="display:none;"><p class="photo-cap-plain">Just living</p></div>
+      <p class="photo-cap">Just living</p>
+    </div>
+
+  </div>
+  <p class="photo-note">More photos coming — Europe 2008 and beyond.</p>
+</section>
+
+<!-- FVS MEMORIAL VIDEO -->
+<section class="sec-border" style="background:rgba(232,226,217,0.012);">
+  <p class="sec-eye">FVS: A Life in Images</p>
+  <div class="memorial-wrap">
+    <p class="memorial-desc">A tribute to Fred Sainz — in images, in music, in memory.</p>
+    <div class="video-container" style="position:relative;">
+      <iframe
+        src="https://www.youtube.com/embed/_SZmYBK1rGk"
+        title="FVS: A Life in Images"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        style="width:100%;height:100%;position:absolute;top:0;left:0;"
+      ></iframe>
+    </div>
+    <p class="fair-use">This video is presented for personal and memorial purposes only. All music and imagery used under fair use provisions for non-commercial, transformative, and commemorative expression. No copyright infringement intended.</p>
   </div>
 </section>
 
+<!-- FOOTER / CONTACT -->
 <footer class="footer" id="contact">
   <div>
     <p class="footer-brand">Sainz of the Times Media</p>
     <p class="footer-sub">Los Angeles, California · sainzofthetimes.com</p>
+    <div class="footer-emails">
+      <a href="mailto:kal@sainzofthetimes.com" class="footer-email">kal@sainzofthetimes.com</a>
+      <a href="mailto:info@sainzofthetimes.com" class="footer-email">info@sainzofthetimes.com</a>
+    </div>
   </div>
   <div class="footer-right">
     <p class="footer-url">Michael "Kal" Sainz</p>
